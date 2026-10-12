@@ -1,16 +1,35 @@
+
 meme_dict = {
-            "CRINGE": "Algo excepcionalmente raro o embarazoso",
-            "LOL": "Una respuesta común a algo gracioso",
-            "ROFL" : "una respuesta a una broma",
-            "SHEESH" : "ligera desaprobación",
-            "CREEPY" : "aterrador, siniestro",
-            "AGGRO" : "ponerse agresivo/enojado",
-            }
+    "CRINGE": "Algo excepcionalmente raro o embarazoso",
+    "LOL": "Una respuesta común a algo gracioso",
+    "ROFL": "Una respuesta a una broma",
+    "SHEESH": "Ligera desaprobación",
+    "CREEPY": "Aterrador, siniestro",
+    "AGGRO": "Ponerse agresivo o enojado",
+    "BRAINROT": "Cosas que hacen que te vuelvas más tonto"
+}
 
+print("BIENVENIDO AL TRADUCTOR MODERNO")
 
-word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ")
+a = int(input(
+    "¿Qué necesitas?\n"
+    "1. Traducción de una palabra moderna\n"
+    "2. Información\n"
+    "Elige una opción: "
+))
 
-if word in meme_dict.keys():
-     print(meme_dict[word])   # ¿Qué debemos hacer si se encuentra la palabra?
+if a == 1:
+    word = input(
+        "Escribe una palabra que no entiendas: "
+    ).upper()
+
+    if word in meme_dict:
+        print(meme_dict[word])
+    else:
+        print("Palabra no encontrada. Mejora tu redacción y vuelve a intentarlo.")
+
+elif a == 2:
+    print("Este programa te permitirá entender mejor las palabras modernas.")
+
 else:
-    print("palabra no encontrada")    # ¿Qué hacer si no se encuentra la palabra?
+    print("Opción no válida. Escribe 1 o 2.")
